@@ -1,13 +1,10 @@
 #include "main.h"
 
 /*
- * print_array - function that prints n elements of an array of
- * integers, followed by a new line.
- *
+ * print_array - function that prints n elements of an array
  * @a: Array to print
  * @n: number of elements to print
- *
- * Return: void
+ * Return: a and n input
  */
 
 void print_array(int *a, int n)
