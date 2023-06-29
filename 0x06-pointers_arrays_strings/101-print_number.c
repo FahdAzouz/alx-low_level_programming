@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number - function that print numbers chars
+ * print_number - function that prints numbers chars
  * @n: integer params
  * Return: 0
  */
@@ -17,7 +17,7 @@ void print_number(int n)
 		k = -n;
 	}
 
-	if (k / 10 != 0)
+	if ((k / 10) != 0)
 	{
 		print_number(k / 10);
 	}
