@@ -3,6 +3,7 @@
 /**
  * print_chessboard - function that prints the chessboard.
  * @a : array dim
+ * Return: nothing
  */
 
 void print_chessboard(char (*a)[8])
