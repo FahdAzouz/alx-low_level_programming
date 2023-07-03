@@ -3,7 +3,7 @@
 /**
  * _strspn - function that gets the length of a prefix substring.
  * @s: string
- * @c: bytes of refference
+ * @accept: bytes of refference
  *
  * Return: number of bytes
  */
