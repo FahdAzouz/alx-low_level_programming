@@ -9,7 +9,7 @@
  * Return: Always zero
  */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b, r;
 
@@ -22,6 +22,5 @@ int main(int argc, char const *argv[])
 	b = _atoi(argv[2]);
 	r = a * b;
 	printf("%d\n", r);
-
 	return (0);
 }
