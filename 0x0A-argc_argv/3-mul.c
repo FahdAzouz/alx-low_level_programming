@@ -11,7 +11,7 @@
 
 int main(int argc, char const *argv[])
 {
-	int a, b;
+	int a, b, r;
 
 	if (argc != 3)
 	{
@@ -20,7 +20,8 @@ int main(int argc, char const *argv[])
 	}
 	a = argv[1];
 	b = argv[2];
-	printf("%d\n", a * b);
+	r = a * b;
+	printf("%d\n", r);
 
 	return (0);
 }
