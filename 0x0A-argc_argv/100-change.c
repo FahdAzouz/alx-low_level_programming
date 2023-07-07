@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 /**
- * main - entry point
+ * main - program that prints the minimum number of coins to make change for an amount of money.
  * @argc: character
  * @argv: character
  *
@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int coin;
+	int c;
 	int total = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 	int i = 0;
@@ -31,15 +31,15 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	}
-	coin = atoi(argv[1]);
-	while (coin > 0)
+	c = atoi(argv[1]);
+	while (c > 0)
 	{
 		i = 0;
 		while (i < 5)
 		{
-			if (coins[i] <= coin)
+			if (coins[i] <= c)
 			{
-				coin -= coins[i];
+				c -= coins[i];
 				total++;
 				break;
 			}
