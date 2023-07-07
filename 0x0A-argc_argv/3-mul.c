@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - program that multiplies two numbers.
- * @argc: number of args
- * @argv: array of args
- *
- * Return: zero or one
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: the int converted from the string
  */
 
 int main(int argc, char *argv[])
