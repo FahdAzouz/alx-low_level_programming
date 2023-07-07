@@ -1,1 +1,1 @@
-C - argc, argv
+C - Static libraries
