@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - entry point
+ * main - program that adds positive numbers.
  * @argc: character
  * @argv: character
  *
