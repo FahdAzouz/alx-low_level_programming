@@ -9,7 +9,7 @@
  * Return: Always zero
  */
 
-int main(int argc, int const *argv[])
+int main(int argc, char const *argv[])
 {
 	(void)argc;
 	printf("%s\n", *argv);
