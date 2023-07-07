@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * main - program that multiplies two numbers.
- * @argc: number of args
- * @argv: array of args
- *
- * Return: Always zero
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: the int converted from the string
  */
 
 int main(int argc, char *argv[])
 {
-	int a, b, r;
+	int a, b;
 
 	if (argc != 3)
 	{
@@ -20,7 +17,6 @@ int main(int argc, char *argv[])
 	}
 	a = _atoi(argv[1]);
 	b = _atoi(argv[2]);
-	r = a * b;
-	printf("%d\n", r);
+	printf("%d\n", a * b);
 	return (0);
 }
