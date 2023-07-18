@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * *new_dog - creates a new dog
+ * new_dog - creates a new dog
  * @name: pointer to dog's name
  * @age: dog's age
  * @owner: pointer to dog's owner
- * 
+ *
  * Return: pointer to new dog
  */
 
