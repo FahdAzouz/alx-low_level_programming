@@ -13,8 +13,7 @@
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int (*f)(int, int);
-	int num1, num2, res;
+	int num1, num2;
 	char *o;
 
 	if (argc != 4)
@@ -35,8 +34,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*o == '/' && num2 == 0) ||
-	    (*o == '%' && num2 == 0))
+	if ((*o == '/' && num2 == 0) || (*o == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
