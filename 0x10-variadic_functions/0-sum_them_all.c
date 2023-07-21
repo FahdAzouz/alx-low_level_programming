@@ -1,13 +1,13 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 
-
 /**
  * sum_them_all - entry point
- * @n: The number of paramters passed to the function
+ * @n: The number of parameters passed to the function
  * Description: --
- * Return: If n == 0 - 0, Otherwise - the sum of all parameters.
+ * Return: If n == 0  0, Otherwise the sum of all parameters.
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
@@ -16,7 +16,9 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(args, n);
 
 	if (n == 0)
+	{
 		return (0);
+	}
 
 	while (i < (int)n)
 	{
