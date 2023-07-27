@@ -33,12 +33,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new == NULL)
 	{
 		free(new);
+		return (NULL);
 	}
 	new->str = strdup(str);
-
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	new->len = i;
+	new->len = _strlen(str);
 	new->next = NULL;
 	if (*head == NULL)
 	{
