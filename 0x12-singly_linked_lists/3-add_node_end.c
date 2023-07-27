@@ -7,28 +7,33 @@
  * @str: str of new node
  * Return: address
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *new, *tmp;
+	unsigned int i;
 
 	new = malloc(sizeof(list_t));
-
 	if (new == NULL)
 		return (NULL);
 
 	new->str = strdup(str);
-	if (new->str == NULL)
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	if (*head == NULL)
 	{
-		free(new);
-		return (NULL);
+		*head = new;
+		return (new);
 	}
-	while (*head->next)
-	{
-		*head = *head->next;
-	}
-	*head->next = new;
-	new->len = strlen(str);
+
+	tmp = *head;
+	while (tmp->next)
+		tmp = tmp->next;
+
+	tmp->next = new;
+	new->len = i;
 	new->next = NULL;
+	
 	return (new);
 }
