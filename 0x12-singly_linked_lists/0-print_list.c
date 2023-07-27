@@ -4,18 +4,19 @@
  * @h: head of linked
  * Return: the number of nodes
  */
+
 size_t	print_list(const list_t *h)
 {
-	int num = 0;
+	int i = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		if (!h->str)
+		if (str == NULL)
 			printf("[0] (nil)\n");
 		else
 			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
-		num++;
+		i++;
 	}
-	return (num);
+	return (i);
 }
