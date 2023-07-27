@@ -5,7 +5,7 @@
  *
  * @s: source string arg
  *
- * Return: size of string arg char*
+ * Return: size of string arg char
  */
 
 int _strlen(const char *s)
@@ -32,8 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
-			free(new);
-			return (NULL);
+		free(new);
 	}
 	new->str = strdup(str);
 
