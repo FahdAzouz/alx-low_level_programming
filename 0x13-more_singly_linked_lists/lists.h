@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <sys/types.h>
+
 
 /**
  * struct listint_s - singly linked list
