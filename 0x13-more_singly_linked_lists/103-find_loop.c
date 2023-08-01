@@ -3,32 +3,34 @@
 /**
  * find_listint_loop - function that finds the loop in a linked list
  * @head: linked list
- * Return: address of the node where the loop starts, or NULL if there is no loop
+ * Return: address of the node where the loop starts,
+ * or NULL if there is no loop
  */
 
 listint_t *find_listint_loop(listint_t *head)
 {
-    listint_t *temp = head, *temp2 = head;
+	listint_t *temp = head, *temp2 = head;
 
-    if (head == NULL)
-        return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-    while (temp != NULL && temp2 != NULL && temp2->next != NULL)
-    {
-        temp = temp->next;
-        temp2 = temp2->next->next;
+	while (temp != NULL && temp2 != NULL && temp2->next != NULL)
+	{
+		temp = temp->next;
+		temp2 = temp2->next->next;
 
-        if (temp == temp2)
-        {
-            temp = head;
-            while (temp != temp2)
-            {
-                temp = temp->next;
-                temp2 = temp2->next;
-            }
-            return (temp);
-        }
-    }
+		if (temp == temp2)
+		{
+			temp = head;
+			while (temp != temp2)
+			{
+				temp = temp->next;
+				temp2 = temp2->next;
+			}
+			return (temp);
+		}
+	}
 
-    return (NULL);
+	return (NULL);
 }
+
