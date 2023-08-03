@@ -10,15 +10,16 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned long int mask = 1;
-    unsigned int count = 0;
+	unsigned long int mask = 1;
+	unsigned int count = 0;
 
-    mask <<= 63;
-    while (mask > 0)
-    {
-        if ((n & mask) != (m & mask))
-            count++;
-        mask >>= 1;
-    }
-    return (count);
+	mask <<= 63;
+	while (mask > 0)
+	{
+		if ((n & mask) != (m & mask))
+			count++;
+		mask >>= 1;
+	}
+
+	return (count);
 }
