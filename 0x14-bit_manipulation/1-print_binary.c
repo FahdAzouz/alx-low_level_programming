@@ -11,23 +11,19 @@ void print_binary(unsigned long int n)
     unsigned long int mask = 1;
     int i = 0;
 
-    mask <<= 63; /* 1 << 63 */
-
-    while (mask > 0)
+    while (mask < n)
     {
-        if ((n & mask) == 0)
-            i++;
-        else
-            break;
-        mask >>= 1; /* divide mask by 2 (right shift) */
+        mask <<= 1;
+        i++;
     }
 
-    while (mask > 0)
+    while (i >= 0)
     {
-        if ((n & mask) == 0)
-            _putchar('0');
-        else
+        if (n & mask)
             _putchar('1');
-        mask >>= 1; /* divide mask by 2 (right shift) */
+        else
+            _putchar('0');
+        mask >>= 1;
+        i--;
     }
 }
