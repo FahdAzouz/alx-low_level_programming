@@ -1,9 +1,8 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stdlib.h>
 #include <stdio.h>
-#include <stdlub.h>
-#include <string.h>
 
 /**
  * struct dlistint_s - doubly linked list
@@ -12,7 +11,7 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- *
+ * for Holberton project
  */
 typedef struct dlistint_s
 {
