@@ -10,12 +10,14 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	if (*head == NULL || index < 0)
-	       	return -1;
+	dlistint_t *current, *temp;
+	unsigned int i;
 
-	dlistint_t *current = *head;
+	if (*head == NULL)
+		return -1;
 
-	/* If index is 0, remove the head node */
+	current = *head;
+
 	if (index == 0) {
 		*head = current->next;
 		if (*head != NULL)
@@ -24,19 +26,18 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return 1;
 	}
 
-	unsigned int i;
-	for (i = 0; i < index && current != NULL; i++) {
+	for (i = 0; current != NULL && i < index; i++) {
 		current = current->next;
 	}
 
-	/* If current is NULL, the index is out of range */
 	if (current == NULL)
 		return -1;
 
-	/* Adjust pointers to skip the node at the given index */
-	current->prev->next = current->next;
 	if (current->next != NULL)
 		current->next->prev = current->prev;
+
+	if (current->prev != NULL)
+		current->prev->next = current->next;
 
 	free(current);
 	return 1;
