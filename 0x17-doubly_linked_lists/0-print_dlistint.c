@@ -8,12 +8,13 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	int i = 0;
+	size_t i = 0;
 	dlistint_t *head = h;
 
-	if (h == NULL)
+	if (!h)
 		return (0);
-	while (head->next != NULL)
+
+	while (head != NULL)
 	{
 		i++;
 		print("%d\n", head->n);
