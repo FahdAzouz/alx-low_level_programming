@@ -28,32 +28,6 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * shash_table_get - retrieves the value associated with a key
- * @ht: a pointer to the sorted hash table
- * @key: the key to get the value
- * Return: NULL or the value associated with key in ht
-**/
-
-char *shash_table_get(const shash_table_t *ht, const char *key)
-{
-	shash_node_t *node;
-	unsigned long int index;
-
-	if (ht == NULL || key == NULL || *key == '\0')
-		return (NULL);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	if (index >= ht->size)
-		return (NULL);
-
-	node = ht->shead;
-	while (node != NULL && strcmp(node->key, key) != 0)
-		node = node->snext;
-
-	return ((node == NULL) ? NULL : node->value);
-}
-
-/**
  * shash_table_set - adds an element to a sorted hash table
  * @ht: a pointer to the sorted hash table
  * @key: the key to add
@@ -133,6 +107,32 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 
 	return (1);
+}
+
+/**
+ * shash_table_get - retrieves the value associated with a key
+ * @ht: a pointer to the sorted hash table
+ * @key: the key to get the value
+ * Return: NULL or the value associated with key in ht
+**/
+
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	shash_node_t *node;
+	unsigned long int index;
+
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
+
+	index = key_index((const unsigned char *)key, ht->size);
+	if (index >= ht->size)
+		return (NULL);
+
+	node = ht->shead;
+	while (node != NULL && strcmp(node->key, key) != 0)
+		node = node->snext;
+
+	return ((node == NULL) ? NULL : node->value);
 }
 
 /**
